@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="LambaTestSuite" parallel="tests">
+
+    <test name="IETest">
+        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="version" value="11.0"/>
+        <parameter name="platform" value="Windows 10"/>
+        <parameter name="deviceName" value="null"/>
+        <parameter name="mobileView" value="false"/>
+        <classes>
+            <class name="loginTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="AndroidTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="version" value="83.0"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="deviceName" value="One Plus 6"/>
+        <parameter name="mobileView" value="true"/>
+        <classes>
+            <class name="loginTest"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="iOSTest">
+        <parameter name="browser" value="safari"/>
+        <parameter name="version" value="13.4"/>
+        <parameter name="platform" value="ios"/>
+        <parameter name="deviceName" value="iPhone 8 Plus"/>
+        <parameter name="mobileView" value="true"/>
+        <classes>
+            <class name="loginTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite>
